@@ -1,0 +1,33 @@
+@import "./imports/_normalize.scss";
+
+*{ box-sizing: border-box }
+img {
+   width: 100%;
+   display: block;
+}
+
+#app-container{
+}
+
+.elementHolder1, .elementHolder2 {
+  margin-top: 15px;
+}
+.thumbnail1 {
+  background: #C8F7C5;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+}
+.theP1, .theP2 {
+  padding-bottom: 2px;
+}
+#app-container2 {
+  margin-top: 200px;
+  padding-top: 75px;
+  background: #C8F7C5;
+}
+.enterZip {
+  margin-left: 43%;
+  border: 2px solid #000
+}
