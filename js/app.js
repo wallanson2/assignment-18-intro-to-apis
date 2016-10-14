@@ -66,3 +66,36 @@ var putDataOnPage2 = function(returnedData2) {
    })
 }
 $.getJSON('https://congress.api.sunlightfoundation.com/legislators?apikey=d1b6cb41350045d4a5a25dcc0e0c728f').then(putDataOnPage2)
+
+var theBigZip = document.querySelector('#app-container2');
+
+var zipVariable = document.querySelector('.enterZip');
+var zipNumber = ''
+// var giveMeTheInfo = function(returnData){
+//   console.log(returnData)
+// }
+var giveMeTheInfo = {}
+console.log(giveMeTheInfo)
+var whatsTheZip = function(evt) {
+// console.log(evt.target.value)
+  // console.log(zipNumber)
+  if (evt.keycode === 13) {
+    zipNumber = evt.target.value
+    // var giveMeTheInfo = []
+    console.log(zipNumber)
+
+  //   // var zipCodeValue = evt.target.value
+  //   // zipVariable.value = ''
+  //   // console.log(zipVariable)
+  $.getJSON('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipNumber + '&apikey=d1b6cb41350045d4a5a25dcc0e0c728f').then(giveMeTheInfo)
+  // $.getJSON('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipNumber + '&apikey=d1b6cb41350045d4a5a25dcc0e0c728f').then(whatsTheZip)
+  }
+}
+
+
+
+
+
+// zipVariable.addEventListener('keydown', whatsTheZip)
+// $.getJSON('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipNumber + '&apikey=d1b6cb41350045d4a5a25dcc0e0c728f').then(giveMeTheInfo)
+zipVariable.addEventListener('keydown', whatsTheZip)
